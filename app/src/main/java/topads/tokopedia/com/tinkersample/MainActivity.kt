@@ -8,6 +8,7 @@ import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.os.Environment
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
@@ -192,5 +193,9 @@ class MainActivity : AppCompatActivity() {
             TODO("VERSION.SDK_INT < KITKAT")
         }
         return file.exists()
+    }
+
+    private fun seting(){
+        Log.d("TAG", "this is setting")
     }
 }
