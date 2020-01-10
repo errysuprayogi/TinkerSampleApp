@@ -14,13 +14,14 @@ android:
     - platform-tools
 
     # BuildTools version used by project
-    - build-tools-28.0.3
+    - build-tools-29.0.0
 
     # SDK version to compile project
-    - android-28
+    - android-29
 
 script:
   - ./gradlew build
+  - ./gradlew :app:assembleLiveDev
   - ./gradlew :app:ktlintCheck
   - ./gradlew :app:lint
   - bundle install
