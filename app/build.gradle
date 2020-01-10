@@ -41,6 +41,10 @@ android {
             dimension "client"
         }
     }
+
+    lintOptions {
+        xmlReport true
+    }
 }
 
 dependencies {
@@ -415,9 +419,22 @@ if (buildWithTinker()) {
 //    }
 }
 
+subprojects {
+    apply plugin: "org.jlleitschuh.gradle.ktlint" // Version should be inherited from parent
+
+    // Optionally configure plugin
+    ktlint {
+        debug = true
+    }
+}
+
+
 ktlint {
     version = "0.22.0"
     android = true
     ignoreFailures = true
-//    reporter = "checkstyle"
+    reporters {
+        reporter "plain"
+        reporter "checkstyle"
+    }
 }

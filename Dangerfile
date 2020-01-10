@@ -21,7 +21,20 @@ checkstyle_format.base_path = Dir.pwd
 checkstyle_format.report "app/build/reports/ktlint/ktlint-results.xml"
 
 # AndroidLint
+android_lint.report_file = "app/build/reports/lint-results.xml"
 android_lint.gradle_task = "runChecksForDanger"
 android_lint.filtering = true
 android_lint.severity = "Error"
 android_lint.lint(inline_mode: true)
+
+# Apk Stat
+apkstats.apk_filepath='app/build/output/apk/liveDev/debug/app-live-dev-debug.apk'
+apkstats.file_size #=> Fixnum
+apkstats.download_size #=> Fixnum
+apkstats.required_features #=> Array<String> | Nil
+apkstats.non_required_features #=> Array<String> | Nil
+apkstats.permissions #=> Array<String> | Nil
+apkstats.min_sdk #=> String | Nil
+apkstats.target_sdk #=> String | Nils
+apkstats.reference_count #=> Fixnum
+apkstats.dex_count #=> Fixnum
