@@ -19,6 +19,7 @@ message("Thank you for your work @#{github.pr_author} 🎉 You might find a few 
 github.dismiss_out_of_range_messages
 checkstyle_format.base_path = Dir.pwd
 checkstyle_format.report "app/build/reports/ktlint/ktlintMainSourceSetCheck.xml"
+ktlint.lint(inline_mode: true)
 
 # AndroidLint
 android_lint.report_file = "app/build/reports/lint-results.xml"
@@ -31,10 +32,4 @@ android_lint.lint(inline_mode: true)
 apkstats.apk_filepath='app/build/output/apk/liveDev/debug/app-live-dev-debug.apk'
 apkstats.file_size #=> Fixnum
 apkstats.download_size #=> Fixnum
-apkstats.required_features #=> Array<String> | Nil
-apkstats.non_required_features #=> Array<String> | Nil
-apkstats.permissions #=> Array<String> | Nil
-apkstats.min_sdk #=> String | Nil
-apkstats.target_sdk #=> String | Nils
-apkstats.reference_count #=> Fixnum
 apkstats.dex_count #=> Fixnum
