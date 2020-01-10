@@ -1,4 +1,4 @@
-package com.resocoder.forecastmvvm.utils
+package topads.tokopedia.com.tinkersample
 
 import android.content.Context
 import android.util.DisplayMetrics

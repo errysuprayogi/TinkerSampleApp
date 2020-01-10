@@ -1,14 +1,11 @@
-message("Hello World!")
-# Warn when there is a big PR
-if git.lines_of_code > 500
-    warn("Big PR")
-end
+# Make it more obvious that a PR is a work in progress and shouldn't be merged yet
+warn("PR is classed as Work in Progress") if github.pr_title.include? "[WIP]"
 
-# Mainly to encourage writing up some reasoning about the PR, rather than
-# just leaving a title
-if github.pr_body.length < 5
-  fail "Please provide a summary in the Pull Request description"
-end
+# Warn when there is a big PR
+warn("Big PR") if git.lines_of_code > 500
+
+# Give a warning if the PR description is empty
+warn("Please provide a PR description") if github.pr_body.length < 5
 
 # Give a warning when a PR is over expected size
 warn("This PR is quite a big one! Try splitting this into separate tasks next time 🙂") if git.lines_of_code > 500
@@ -24,11 +21,5 @@ checkstyle_format.report "app/build/reports/ktlint/ktlintMainSourceSetCheck.xml"
 android_lint.report_file = "app/build/reports/lint-results.xml"
 android_lint.gradle_task = "runChecksForDanger"
 # android_lint.filtering = true
-android_lint.severity = "Error"
+# android_lint.severity = "Error"
 android_lint.lint(inline_mode: true)
-
-# Apk Stat
-apkstats.apk_filepath='app/build/output/apk/liveDev/debug/app-live-dev-debug.apk'
-apkstats.file_size #=> Fixnum
-apkstats.download_size #=> Fixnum
-apkstats.dex_count #=> Fixnum
