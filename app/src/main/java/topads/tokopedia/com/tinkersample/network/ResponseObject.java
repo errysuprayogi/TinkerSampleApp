@@ -3,7 +3,7 @@ package topads.tokopedia.com.tinkersample.network;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-import topads.tokopedia.com.tinkersample.Utils;
+import topads.tokopedia.com.tinkersample.utils.Utils;
 
 /**
  * Author errysuprayogi on 09,January,2020

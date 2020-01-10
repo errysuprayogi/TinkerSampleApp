@@ -1,4 +1,4 @@
-package topads.tokopedia.com.tinkersample
+package topads.tokopedia.com.tinkersample.utils
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -20,7 +20,8 @@ class UserPrefs private constructor(private val context: Context) {
         private var instance: UserPrefs? = null
         fun getInstance(context: Context): UserPrefs? {
             if (instance == null) {
-                instance = UserPrefs(context)
+                instance =
+                    UserPrefs(context)
             }
             return instance
         }

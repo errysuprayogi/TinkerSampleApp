@@ -1,4 +1,4 @@
-package topads.tokopedia.com.tinkersample
+package topads.tokopedia.com.tinkersample.utils
 
 import android.content.Context
 import android.util.DisplayMetrics
