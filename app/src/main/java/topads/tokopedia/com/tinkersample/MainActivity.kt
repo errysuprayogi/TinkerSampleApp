@@ -29,19 +29,19 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        text.text = "Hello Tinker"
+        text.text = "Fixing a crash"
 
         askForRequiredPermissions()
         load_btn.setOnClickListener {
             TinkerInstaller.onReceiveUpgradePatch(
                 applicationContext,
-                Environment.getExternalStorageDirectory().absolutePath + "/Download/patch_signed_7zip.apk"
+                Environment.getExternalStorageDirectory()
+                    .absolutePath + "/Download/patch_signed_7zip.apk"
             )
         }
 
         click_btn.setOnClickListener {
-//            throw UnsupportedOperationException()
-            Toast.makeText(this, "Hae hae :)", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Hello I'am Fixed", Toast.LENGTH_LONG).show()
         }
     }
 
