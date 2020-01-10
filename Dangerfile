@@ -18,7 +18,7 @@ message("Thank you for your work @#{github.pr_author} 🎉 You might find a few 
 # ktlint
 github.dismiss_out_of_range_messages
 checkstyle_format.base_path = Dir.pwd
-checkstyle_format.report "app/build/reports/ktlint/ktlint-debug.xml"
+checkstyle_format.report "app/build/reports/ktlint/ktlint-results.xml"
 
 # AndroidLint
 android_lint.gradle_task = "runChecksForDanger"

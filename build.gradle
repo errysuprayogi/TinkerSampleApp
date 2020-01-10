@@ -35,7 +35,7 @@ task clean(type: Delete) {
 
 task runChecksForDanger() {
     group = "Reporting"
-    dependsOn 'ktlintCheck'
+    dependsOn ':app:ktlintCheck'
     dependsOn ':app:lint'
 
     def file = file("${project.rootDir}/build/reports/ktlint")
