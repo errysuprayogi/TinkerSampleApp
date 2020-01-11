@@ -1,5 +1,6 @@
 package com.tokopedia.sample.utils
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.SharedPreferences
 
@@ -7,6 +8,7 @@ import android.content.SharedPreferences
  * Author errysuprayogi on 10,January,2020
  */
 
+@SuppressLint("StaticFieldLeak")
 class UserPrefs private constructor(private val context: Context) {
     private val settings: SharedPreferences
     fun saveString(key: String?, value: String?) {
