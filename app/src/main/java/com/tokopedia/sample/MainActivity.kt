@@ -1,4 +1,4 @@
-package topads.tokopedia.com.tinkersample
+package com.tokopedia.sample
 
 import android.Manifest
 import android.app.ProgressDialog
@@ -18,7 +18,7 @@ import com.downloader.PRDownloader
 import com.downloader.Status
 import com.tencent.tinker.lib.tinker.TinkerInstaller
 import kotlinx.android.synthetic.main.activity_main.*
-import topads.tokopedia.com.tinkersample.utils.Utils
+import com.tokopedia.sample.utils.Utils
 import java.io.File
 
 

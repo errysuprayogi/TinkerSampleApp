@@ -1,4 +1,4 @@
-package topads.tokopedia.com.tinkersample.utils;
+package com.tokopedia.sample.utils;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

@@ -1,4 +1,4 @@
-package topads.tokopedia.com.tinkersample;
+package com.tokopedia.sample;
 
 import android.annotation.TargetApi;
 import android.app.Application;

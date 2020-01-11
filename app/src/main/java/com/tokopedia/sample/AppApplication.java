@@ -1,4 +1,4 @@
-package topads.tokopedia.com.tinkersample;
+package com.tokopedia.sample;
 
 import android.content.Context;
 

@@ -1,9 +1,9 @@
-package topads.tokopedia.com.tinkersample.network;
+package com.tokopedia.sample.network;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-import topads.tokopedia.com.tinkersample.utils.Utils;
+import com.tokopedia.sample.utils.Utils;
 
 /**
  * Author errysuprayogi on 09,January,2020
