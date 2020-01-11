@@ -25,5 +25,5 @@ android_lint.filtering = true
 android_lint.lint(inline_mode: true)
 
 # ApkStats
-apkstats.apk_filepath="app/build/outputs/apk/liveDev/debug/app-live-dev-debug.apk"
-apkstats.file_size #=> Fixnum
+# apkstats.apk_filepath="app/build/outputs/apk/liveDev/debug/app-live-dev-debug.apk"
+# apkstats.file_size #=> Fixnum
