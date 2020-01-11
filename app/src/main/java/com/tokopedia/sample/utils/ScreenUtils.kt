@@ -4,7 +4,6 @@ import android.content.Context
 import android.util.DisplayMetrics
 import android.view.WindowManager
 
-
 /**
  * Author errysuprayogi on 09,January,2020
  */

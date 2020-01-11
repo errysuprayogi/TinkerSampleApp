@@ -20,8 +20,6 @@ import com.tencent.tinker.lib.tinker.TinkerInstaller
 import kotlinx.android.synthetic.main.activity_main.*
 import com.tokopedia.sample.utils.Utils
 import java.io.File
-
-
 class MainActivity : AppCompatActivity() {
 
     var downloadIdOne = 0
@@ -29,7 +27,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        text.text = "Fixing a crash"
+        text.text = "Fixing a crash ok"
 
         askForRequiredPermissions()
         load_btn.setOnClickListener {
@@ -41,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         click_btn.setOnClickListener {
-            Toast.makeText(this, "Hello I'am Fixed", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "haehae", Toast.LENGTH_LONG).show()
         }
     }
 
@@ -65,7 +63,7 @@ class MainActivity : AppCompatActivity() {
                 Manifest.permission.READ_EXTERNAL_STORAGE
             )
             res == PackageManager.PERMISSION_GRANTED
-        } else { // When SDK_INT is below 16, READ_EXTERNAL_STORAGE will also be granted if WRITE_EXTERNAL_STORAGE is granted.
+        } else {
             val res = ContextCompat.checkSelfPermission(
                 this.applicationContext,
                 Manifest.permission.WRITE_EXTERNAL_STORAGE
@@ -137,7 +135,6 @@ class MainActivity : AppCompatActivity() {
                     progressBarDialog.dismiss()
                     deleteErrorFile(patchUrl)
                 }
-
             })
     }
 
@@ -195,7 +192,7 @@ class MainActivity : AppCompatActivity() {
         return file.exists()
     }
 
-    private fun seting(){
+    private fun seting() {
         Log.d("TAG", "this is setting")
     }
 }

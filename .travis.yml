@@ -23,11 +23,11 @@ before_install:
   - chmod +x gradlew
 script:
   - ./gradlew build
-  - ./gradlew :app:assembleLiveDev
-  - ./gradlew :app:ktlintCheck
+#  - ./gradlew :app:assembleLiveDev
+#  - ./gradlew :app:ktlintCheck
   - ./gradlew :app:lint
   - bundle install
-  - bundle exec danger --verbose
+  - bundle exec danger
 
 cache:
   directories:
