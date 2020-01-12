@@ -78,3 +78,9 @@ android_lint.lint(inline_mode: true)
 # ApkStats
 # apkstats.apk_filepath="app/build/outputs/apk/liveDev/debug/app-live-dev-debug.apk"
 # apkstats.file_size #=> Fixnum
+
+github.review.start
+github.review.fail("I can fail your PR in a moment")
+github.review.warn("I'm warning yo")
+github.review.message("100 message")
+github.review.submit
