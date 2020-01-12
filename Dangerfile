@@ -79,7 +79,7 @@ android_lint.lint(inline_mode: true)
 # apkstats.apk_filepath="app/build/outputs/apk/liveDev/debug/app-live-dev-debug.apk"
 # apkstats.file_size #=> Fixnum
 
-issues = read_issues_from_report
+issues = android_lint.read_issues_from_report
 
 #github.review.start
 #if android_lint.filtered_issues.length > 0
