@@ -80,7 +80,9 @@ android_lint.lint(inline_mode: true)
 # apkstats.file_size #=> Fixnum
 
 github.review.start
-#github.review.fail("I can fail your PR in a moment")
-#github.review.warn("I'm warning yo")
-github.review.message("Nice work! Approved")
+if github.pr_json["review_comments"] > 0
+  github.review.fail("I can fail your PR in a moment")
+else
+  github.review.message("Nice work! Approved")
+end
 github.review.submit
