@@ -24,7 +24,7 @@ before_install:
 script:
   - ./gradlew build
 #  - ./gradlew :app:assembleLiveDev
-  - ./gradlew :app:ktlintCheck
+#  - ./gradlew :app:ktlintCheck
   - ./gradlew :app:lint
   - bundle install
   - bundle exec danger

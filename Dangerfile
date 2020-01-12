@@ -62,10 +62,11 @@ warn("This PR is quite a big one! Try splitting this into separate tasks next ti
 
 message("Thank you for your work @#{github.pr_author} 🎉 You might find a few suggestions from me below 😉")
 
+# github.dismiss_out_of_range_messages
+
 # ktlint
-github.dismiss_out_of_range_messages
-checkstyle_format.base_path = Dir.pwd
-checkstyle_format.report "app/build/reports/ktlint/ktlintMainSourceSetCheck.xml"
+# checkstyle_format.base_path = Dir.pwd
+# checkstyle_format.report "app/build/reports/ktlint/ktlintMainSourceSetCheck.xml"
 
 # AndroidLint
 android_lint.report_file = "app/build/reports/lint-results.xml"
