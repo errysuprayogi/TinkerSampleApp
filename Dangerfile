@@ -12,9 +12,9 @@ end
 
 def exceptionMessages(file)
   if File.file?(file)
-    message "Something went wrong checking `#{file}`. Check your Dangerfile"
+    message("Something went wrong checking `#{file}`. Check your Dangerfile")
   else
-    message "One of modified files could not be read, does it really exist?"
+    message("One of modified files could not be read, does it really exist?")
   end
 end
 
@@ -39,14 +39,14 @@ end
 
 # Mainly to encourage writing up some reasoning about the PR, rather than
 # just leaving a title
-if github.pr_body.length < 120
-  warn "Please provide a summary in the Pull Request description"
-end
+#if github.pr_body.length < 120
+#  warn "Please provide a summary in the Pull Request description"
+#end
 
 # Ensure that the PR title follows the convention
-if !(github.pr_title =~ /\[TASKID-([0-9])+\](.*)/)
-  warn "The Pull Request title does not follow the convention [TASKID-0000] PR Title text"
-end
+# if !(github.pr_title =~ /\[TASKID-([0-9])+\](.*)/)
+#  warn "The Pull Request title does not follow the convention [TASKID-0000] PR Title text"
+#end
 
 #Check modified files, apply rules to them
 git.modified_files.each do |file|
