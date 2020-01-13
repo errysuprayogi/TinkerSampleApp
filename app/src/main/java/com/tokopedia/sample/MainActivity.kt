@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         click_btn.setOnClickListener {
-            Toast.makeText(this, "Hello I'am Fixed", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Test", Toast.LENGTH_LONG).show()
         }
     }
 
