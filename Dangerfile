@@ -65,8 +65,8 @@ message("Thank you for your work @#{github.pr_author} 🎉 You might find a few 
 # github.dismiss_out_of_range_messages
 
 # ktlint
-# checkstyle_format.base_path = Dir.pwd
-# checkstyle_format.report "app/build/reports/ktlint/ktlintMainSourceSetCheck.xml"
+checkstyle_format.base_path = Dir.pwd
+checkstyle_format.report "app/build/reports/ktlint/ktlintMainSourceSetCheck.xml"
 
 # AndroidLint
 android_lint.report_file = "app/build/reports/lint-results.xml"
