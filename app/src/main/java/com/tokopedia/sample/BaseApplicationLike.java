@@ -54,7 +54,7 @@ public class BaseApplicationLike extends DefaultApplicationLike {
         TrackApp.getInstance().registerImplementation(TrackApp.MOENGAGE, MoengageAnalytics.class);
         TrackApp.getInstance().initializeAllApis();
     }
-x
+
     @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
     public void registerActivityLifecycleCallbacks(
             Application.ActivityLifecycleCallbacks callback) {
