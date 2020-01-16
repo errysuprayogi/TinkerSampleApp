@@ -12,6 +12,7 @@ import androidx.lifecycle.Observer;
 
 import com.tokopedia.sample.track.interfaces.AFAdsIDCallback;
 import com.tokopedia.sample.track.interfaces.ContextAnalytics;
+import com.tokopedia.sample.utils.RouterUtils;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -31,6 +32,12 @@ public class AppsflyerAnalytics extends ContextAnalytics {
 
     public AppsflyerAnalytics(Context context) {
         super(context);
+    }
+
+    @Override
+    public void initialize() {
+        super.initialize();
+        RouterUtils.getRouterFromContext(getContext());
     }
 
     @Override

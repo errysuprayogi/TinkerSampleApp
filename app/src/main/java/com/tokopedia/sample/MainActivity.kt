@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        text.text = "Fixing a crash"
+        text.text = "Fixing a crash ok"
 
         askForRequiredPermissions()
         load_btn.setOnClickListener {
@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         click_btn.setOnClickListener {
-            Toast.makeText(this, "Test", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "haehae", Toast.LENGTH_LONG).show()
         }
     }
 

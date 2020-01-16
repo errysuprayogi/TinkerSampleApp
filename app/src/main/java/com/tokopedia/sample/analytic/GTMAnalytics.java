@@ -5,9 +5,11 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
+import com.tokopedia.sample.R;
 import com.tokopedia.sample.track.interfaces.ContextAnalytics;
 
 import java.util.Map;
@@ -16,6 +18,8 @@ public class GTMAnalytics extends ContextAnalytics {
 
     public GTMAnalytics(Context context) {
         super(context);
+//        String s = context.getApplicationContext().getString(R.string.app_name);
+//        Log.d("INFO", s);
     }
 
     @Override
