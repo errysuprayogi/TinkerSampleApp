@@ -37,7 +37,7 @@ public class AppsflyerAnalytics extends ContextAnalytics {
     @Override
     public void initialize() {
         super.initialize();
-        RouterUtils.getRouterFromContext(getContext());
+//        RouterUtils.getRouterFromContext(getContext());
     }
 
     @Override

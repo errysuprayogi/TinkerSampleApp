@@ -17,9 +17,12 @@ import com.downloader.OnDownloadListener
 import com.downloader.PRDownloader
 import com.downloader.Status
 import com.tencent.tinker.lib.tinker.TinkerInstaller
-import kotlinx.android.synthetic.main.activity_main.*
+import com.tencent.tinker.loader.shareutil.ShareTinkerInternals
+import com.tokopedia.sample.utils.RouterUtils
 import com.tokopedia.sample.utils.Utils
+import kotlinx.android.synthetic.main.activity_main.*
 import java.io.File
+
 class MainActivity : AppCompatActivity() {
 
     var downloadIdOne = 0
@@ -28,6 +31,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         text.text = "Fixing a crash ok"
+
+
+        val isARKHotRunning = ShareTinkerInternals.isArkHotRuning()
+        Log.e(MainActivity::class.java.simpleName, "ARK HOT Running status = $isARKHotRunning")
 
         askForRequiredPermissions()
         load_btn.setOnClickListener {
@@ -39,7 +46,10 @@ class MainActivity : AppCompatActivity() {
         }
 
         click_btn.setOnClickListener {
-            Toast.makeText(this, "haehae", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "okokkok", Toast.LENGTH_LONG).show()
+        }
+        button.setOnClickListener {
+            RouterUtils.getRouterFromContext(applicationContext);
         }
     }
 

@@ -16,12 +16,33 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        /**
+         * you can use multiDex and install it in your ApplicationLifeCycle implement
+         */
+        multiDexEnabled true
+        /**
+         * buildConfig can change during patch!
+         * we can use the newly value when patch
+         */
+        buildConfigField "String", "MESSAGE", "\"I am the base apk\""
+//        buildConfigField "String", "MESSAGE", "\"I am the patch apk\""
+        /**
+         * client version would update with patch
+         * so we can get the newly git version easily!
+         */
+        buildConfigField "String", "TINKER_ID", "\"${getTinkerIdValue()}\""
+        buildConfigField "String", "PLATFORM", "\"all\""
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+
+    //recommend
+    dexOptions {
+        jumboMode = true
     }
 
     // Specifies 4 flavor dimensions.
@@ -45,6 +66,9 @@ android {
     lintOptions {
         xmlReport true
     }
+    packagingOptions {
+        exclude "/META-INF/**"
+    }
 }
 
 dependencies {
@@ -58,9 +82,10 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
 
-    annotationProcessor("com.tencent.tinker:tinker-android-anno:1.9.14") { changing = true }
-    compileOnly("com.tencent.tinker:tinker-android-anno:1.9.14") { changing = true }
-    api("com.tencent.tinker:tinker-android-lib:1.9.14") { changing = true }
+    annotationProcessor("com.tencent.tinker:tinker-android-anno:1.9.14.5")
+    compileOnly("com.tencent.tinker:tinker-android-anno:1.9.14.5")
+    api("com.tencent.tinker:tinker-android-lib:1.9.14.5")
+
     implementation "com.android.support:multidex:1.0.1"
     implementation 'com.squareup.retrofit2:retrofit:2.5.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
@@ -93,9 +118,9 @@ ext {
     tinkerEnabled = true
 
     //old apk file to build patch apk
-    tinkerOldApkPath = "${bakPath}/app-0115-14-12-44/liveDev/app-live-dev-debug.apk"
+    tinkerOldApkPath = "${bakPath}/app-0121-21-45-28/liveDev/app-live-dev-debug.apk"
     //resource R.txt to build patch apk, must input if there is resource changed
-    tinkerApplyResourcePath = "${bakPath}/app-0115-14-12-44/liveDev/app-live-dev-debug-R.txt"
+    tinkerApplyResourcePath = "${bakPath}/app-0121-21-45-28/liveDev/app-live-dev-debug-R.txt"
 
     //proguard mapping file to build patch apk
     tinkerApplyMappingPath = "${bakPath}/app-debug-1018-17-32-47-mapping.txt"
