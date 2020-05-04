@@ -1,4 +1,4 @@
-package topads.tokopedia.com.tinkersample
+package topads.tokopedia.com.project
 
 import org.junit.Test
 
