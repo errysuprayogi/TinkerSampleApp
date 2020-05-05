@@ -1,7 +1,6 @@
 language: android
 
 install: true
-
 sudo: true
 
 notifications:
