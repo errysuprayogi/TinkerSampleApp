@@ -7,7 +7,6 @@ sudo: true
 notifications:
   email: false
 
-
 android:
   components:
     # use the latest revision of Android SDK Tools
